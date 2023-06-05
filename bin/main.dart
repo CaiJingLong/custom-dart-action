@@ -33,4 +33,14 @@ void main(List<String> arguments) {
   startGroup('core.getInput(\'input-value\')');
   info('$inputValue');
   groupEnd();
+
+  startGroup('env of start INPUT');
+
+  Platform.environment.keys
+      .where((key) => key.startsWith('INPUT_'))
+      .forEach((key) {
+    info('$key: ${Platform.environment[key]}');
+  });
+
+  groupEnd();
 }
