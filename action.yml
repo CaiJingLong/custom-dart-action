@@ -39,5 +39,5 @@ runs:
       run: dart run "${{ github.action_path }}/${{ inputs.bin-name }}"
       shell: bash
       env:
-        INPUT-VALUE: ${{ inputs.input-value }}
-        GITHUB-TOKEN: ${{ inputs.github-token }}
+       INPUT_input-value: ${{ inputs.input-value }}
+       INPUT_github-token: ${{ inputs.github-token }}
