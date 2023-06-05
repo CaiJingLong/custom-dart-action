@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:github_action_context/github_action_context.dart';
 import 'package:github_action_core/github_action_core.dart';
+import 'package:github_action_core/github_action_core.dart' as core;
 
 void main(List<String> arguments) {
   startGroup('context.fields');
@@ -26,5 +27,10 @@ void main(List<String> arguments) {
 
   startGroup('context.payload');
   info(context.payload.toString());
+  groupEnd();
+
+  final inputValue = core.getInput('input-value');
+  startGroup('core.getInput(\'input-value\')');
+  info('$inputValue');
   groupEnd();
 }
