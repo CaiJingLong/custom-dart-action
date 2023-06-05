@@ -10,6 +10,9 @@ inputs:
     description: 'The dart file path of the action'
     required: true
     default: bin/main.dart
+  input-value:
+    description: 'The value will echo in action logs.'
+    required: true
 
 runs:
   using: composite
